@@ -236,7 +236,7 @@ jobs:
 
       - name: Upload artifacts
         if: ${{ github.event_name != 'release' && needs.prepare.outputs.publish_build == 'true' }}
-        uses: burnett01/rsync-deployments@7.0.1
+        uses: burnett01/rsync-deployments@7.1.0
         with:
           rsh: -q
           switches: -aW --include="haos_*" --exclude="*"
